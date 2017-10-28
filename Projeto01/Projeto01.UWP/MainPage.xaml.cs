@@ -21,7 +21,15 @@ namespace Projeto01.UWP
         {
             this.InitializeComponent();
 
-            LoadApplication( new Projeto01.App() );
+            //LoadApplication( new Projeto01.App() );
+
+            this.btnSomar.Click += delegate
+            {
+                decimal valor1 = Convert.ToDecimal( this.txbValor1.Text );
+                decimal valor2 = Convert.ToDecimal( this.txbValor2.Text );
+
+                this.txbResultado.Text = $"O resultado é: {MyClass.Somar(valor1,valor2).ToString("N2")}";
+            };
         }
     }
 }

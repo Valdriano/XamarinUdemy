@@ -10,6 +10,12 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Valor 1" VerticalAlignment="Top"/>
+        <TextBox x:Name="txbValor1" HorizontalAlignment="Left" Margin="10,35,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,72,0,0" TextWrapping="Wrap" Text="Valor 2" VerticalAlignment="Top"/>
+        <TextBox x:Name="txbValor2" HorizontalAlignment="Left" Margin="10,97,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
+        <Button x:Name="btnSomar" Content="Somar" HorizontalAlignment="Left" Margin="149,151,0,0" VerticalAlignment="Top"/>
+        <TextBlock x:Name="txbResultado" HorizontalAlignment="Left" Margin="10,204,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="340"/>
 
     </Grid>
 </forms:WindowsPage>
