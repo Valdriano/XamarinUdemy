@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Projeto04.Views.TarefaPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Tarefas" HorizontalOptions="CenterAndExpand" />
+            <StackLayout Orientation="Vertical">
+                <Label Text="Nome da Tarefa"></Label>
+                <Entry x:Name="txbNome" Placeholder="Digite o nome da tarefa"></Entry>
+                <Button x:Name="btnAdd" Text="Adicionar"></Button>
+            </StackLayout>
+            <Label Text="Lista de tarefas" FontAttributes="Bold" FontSize="20" HorizontalOptions="CenterAndExpand" ></Label>
+            <ListView x:Name="listViewTarefa" ItemsSource="{Binding Tarefas}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding Nome}">
+                        </TextCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Projeto03.Views.PessoaListPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Lista de Pessoas"
+                HorizontalOptions="CenterAndExpand" />
+            <ListView ItemsSource="{Binding listPessoas}" ItemTapped="ListView_Tapped">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <!--<ViewCell>
+                            <StackLayout Padding="20">
+                                <Label Text="{Binding Nome}"></Label>
+                            </StackLayout>
+                        </ViewCell>-->
+                        <!--<TextCell Text="{Binding Nome}" Detail="{Binding Email}" TextColor="Green" DetailColor="Yellow">
+                        </TextCell>-->
+                        <ImageCell ImageSource="https://yt3.ggpht.com/-i3MO9CsymQ8/AAAAAAAAAAI/AAAAAAAAAAA/K12bICp0ApY/s900-c-k-no-mo-rj-c0xffffff/photo.jpg" Text="{Binding Nome}" Detail="{Binding Email}" TextColor="Green" DetailColor="Yellow">
+                        </ImageCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

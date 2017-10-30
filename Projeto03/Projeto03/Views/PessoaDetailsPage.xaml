@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Projeto03.Views.PessoaDetailsPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Pessoa Detalhe" HorizontalOptions="CenterAndExpand"  FontSize="14"/>
+            <Label Text="{Binding Pessoa.Nome}"></Label>
+            <Label Text="{Binding Pessoa.Email}"></Label>
+            <Label Text="{Binding Pessoa.Cargo}"></Label>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

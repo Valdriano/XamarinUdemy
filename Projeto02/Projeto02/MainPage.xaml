@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Projeto02"
+             x:Class="Projeto02.MainPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Welcome to Xamarin.Forms!"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Label Text="Valor 1"></Label>
+            <Entry x:Name="txbValor1" Placeholder="Digite um valor"></Entry>
+            <Label Text="Valor 2"></Label>
+            <Entry x:Name="txbValor2" Placeholder="Digite um valor"></Entry>
+            <Button x:Name="btnSomar" Text="Somar"></Button>
+            <Label x:Name="lblResultado"></Label>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
