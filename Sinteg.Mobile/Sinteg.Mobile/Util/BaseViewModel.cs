@@ -19,6 +19,14 @@ namespace Sinteg.Mobile.Util
             set { SetProperty( ref _title , value ); }
         }
 
+        private bool isBusy;
+
+        public bool IsBusy
+        {
+            get { return isBusy; }
+            set { SetProperty( ref isBusy , value ); }
+        }
+
         public event PropertyChangedEventHandler PropertyChanged;
 
         protected virtual void OnPropertyChanged( [CallerMemberName] string propertyName = null )
@@ -43,7 +51,7 @@ namespace Sinteg.Mobile.Util
             var viewModelType = typeof( TViewModel );
             var viewModelTypeName = viewModelType.Name;
             var viewModelWordLength = "ViewModel".Length;
-            var viewTypeName = $"Sinteg.Mobile.{viewModelTypeName.Substring( 0 , viewModelTypeName.Length - viewModelWordLength )}Page";
+            var viewTypeName = $"Sinteg.Mobile.Views.{viewModelTypeName.Substring( 0 , viewModelTypeName.Length - viewModelWordLength )}Page";
             var viewType = Type.GetType( viewTypeName );
 
             var page = Activator.CreateInstance( viewType ) as Page;
@@ -51,8 +59,8 @@ namespace Sinteg.Mobile.Util
             if( viewModelType.GetTypeInfo().DeclaredConstructors.Any( c => c.GetParameters().Any( p => p.ParameterType == typeof( IUsuarioServiceApi ) ) ) )
             {
                 var argsList = args.ToList();
-                var monkeyHubApiService = DependencyService.Get<IUsuarioServiceApi>();
-                argsList.Insert( 0 , monkeyHubApiService );
+                var ApiService = DependencyService.Get<IUsuarioServiceApi>();
+                argsList.Insert( 0 , ApiService );
                 args = argsList.ToArray();
             }
 
@@ -62,7 +70,10 @@ namespace Sinteg.Mobile.Util
                 page.BindingContext = viewModel;
             }
 
-            await Application.Current.MainPage.Navigation.PushAsync( page );
+            if( viewTypeName != "Sinteg.Mobile.Views.MainPage" )
+                await Application.Current.MainPage.Navigation.PushAsync( page );
+            else
+                Application.Current.MainPage = new NavigationPage( page );
         }
 
         public virtual Task LoadAsync()

@@ -12,14 +12,15 @@ namespace Sinteg.Mobile.Service
 {
     public class UsuarioServiceApi : IUsuarioServiceApi
     {
-        private const string BaseUrl = "http://localhost:20759/api/";
+        private const string BaseUrl = "http://10.2.10.71/WebApp/api/";
         public async Task<Usuario> GetUsuario( string Login , string Senha )
         {
             HttpClient httpClient = new HttpClient();
 
             httpClient.DefaultRequestHeaders.Accept.Add( new MediaTypeWithQualityHeaderValue( "application/json" ) );
 
-            HttpResponseMessage httpResponseMessage = await httpClient.GetAsync( $"{BaseUrl}usuarios/{Login}/{Senha}" ).ConfigureAwait( false );
+            //HttpResponseMessage httpResponseMessage = await httpClient.GetAsync( $"{BaseUrl}usuarios/Login/{Login}/{Senha}" ).ConfigureAwait( false );
+            HttpResponseMessage httpResponseMessage = await httpClient.PostAsync( $"{BaseUrl}usuarios/Login/{Login}/{Senha}" , null ).ConfigureAwait( false );
 
             if( httpResponseMessage.IsSuccessStatusCode )
             {

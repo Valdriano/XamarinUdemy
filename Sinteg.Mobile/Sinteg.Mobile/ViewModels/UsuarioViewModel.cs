@@ -28,6 +28,9 @@ namespace Sinteg.Mobile.ViewModels
         {
             try
             {
+                if( IsBusy )
+                    return;
+
                 if( string.IsNullOrWhiteSpace( Login ) )
                 {
                     await DisplayAlert( "Aviso" , "Informe o nome de login:" , "OK" );
@@ -41,6 +44,8 @@ namespace Sinteg.Mobile.ViewModels
 
                     return;
                 }
+
+                IsBusy = true;
 
                 Usuario = await usuarioServiceApi.GetUsuario( Login , Senha );
 
@@ -59,6 +64,10 @@ namespace Sinteg.Mobile.ViewModels
             {
 
                 await DisplayAlert( "Mensagem de Erro" , $"{ex.Message}" , "OK" );
+            }
+            finally
+            {
+                IsBusy = false;
             }
         }
 

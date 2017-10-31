@@ -6,11 +6,13 @@
         <StackLayout>
             <Label Text="Sinteg Mobile" HorizontalOptions="CenterAndExpand" FontSize="25" FontAttributes="Bold" />
             <Entry Placeholder="Login" Text="{Binding Login}"></Entry>
-            <Entry Placeholder="Senha" Text="{Binding Senha}"></Entry>
+            <Entry Placeholder="Senha" Text="{Binding Senha}" IsPassword="True"></Entry>
             <StackLayout Orientation="Vertical">
                 <Button Text="Logar" Command="{Binding LoginCommand}"></Button>
                 <Button Text="Sair" Command="{Binding SairCommand}"></Button>
             </StackLayout>
+            <ActivityIndicator IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}"></ActivityIndicator>
+            <Label IsVisible="{Binding IsBusy}" Text="Logando no servidor do sinteg, por favor aguarde!" HorizontalOptions="CenterAndExpand"></Label>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

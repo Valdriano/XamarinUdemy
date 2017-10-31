@@ -40,5 +40,14 @@ namespace Projeto04.Views
 
             this.listViewTarefa.ItemsSource = dataAccess.GetList();
         }
+
+        private void MenuItem_Excluir( object sender , EventArgs e )
+        {
+            Tarefa tarefa = ( ( MenuItem ) sender ).CommandParameter as Tarefa;
+
+            dataAccess.Delete( tarefa );
+
+            BindingContext = new TarefaPageViewModel();
+        }
     }
 }

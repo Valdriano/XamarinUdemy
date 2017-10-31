@@ -14,8 +14,15 @@
             <ListView x:Name="listViewTarefa" ItemsSource="{Binding Tarefas}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <TextCell Text="{Binding Nome}">
-                        </TextCell>
+                        <ViewCell>
+                            <ViewCell.ContextActions>
+                                <MenuItem x:Name="menuItem" Text="Excluir" CommandParameter="{Binding .}" Clicked="MenuItem_Excluir"></MenuItem>
+                            </ViewCell.ContextActions>
+                            <StackLayout>
+                                <Label Text="{Binding Nome}"></Label>
+                                <Label Text="{Binding Finalizada}"></Label>
+                            </StackLayout>
+                        </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>

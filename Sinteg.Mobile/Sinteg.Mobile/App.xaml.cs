@@ -17,7 +17,7 @@ namespace Sinteg.Mobile
 
             IUsuarioServiceApi usuarioServiceApi = DependencyService.Get<IUsuarioServiceApi>();
 
-            MainPage = new NavigationPage( new LoginPage( usuarioServiceApi ) );
+            MainPage = new LoginPage( usuarioServiceApi );
         }
 
         protected override void OnStart()
