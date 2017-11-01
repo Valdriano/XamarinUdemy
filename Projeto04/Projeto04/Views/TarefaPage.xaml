@@ -1,26 +1,70 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Projeto04.Views.TarefaPage">
+             x:Class="Projeto04.Views.TarefaPage"
+             x:Name="TarefaPage"
+             Title="App Tarefas"
+             xmlns:convert="clr-namespace:Projeto04.Converter;assembly=Projeto04">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <OnPlatform.iOS>0,20,0,0</OnPlatform.iOS>
+            <OnPlatform.Android>0,0,0,0</OnPlatform.Android>
+            <OnPlatform.WinPhone>0,0,0,0</OnPlatform.WinPhone>
+        </OnPlatform>
+    </ContentPage.Padding>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <convert:BoolConvert x:Key="cvtFinalizado"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Sobre"/>
+    </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Tarefas" HorizontalOptions="CenterAndExpand" />
-            <StackLayout Orientation="Vertical">
-                <Label Text="Nome da Tarefa"></Label>
-                <Entry x:Name="txbNome" Placeholder="Digite o nome da tarefa"></Entry>
-                <Button x:Name="btnAdd" Text="Adicionar"></Button>
+            <Label Text="Tarefas" 
+                   HorizontalOptions="CenterAndExpand" />
+            <StackLayout Orientation="Horizontal">
+                <Entry Text="{Binding tarefa.Nome}" 
+                       x:Name="txbNome" 
+                       Placeholder="Digite o nome da tarefa" 
+                       HorizontalOptions="FillAndExpand"
+                       VerticalOptions="Center"/>
+                <Button x:Name="btnSalvar" 
+                        Text="Salvar" 
+                        HorizontalOptions="FillAndExpand" 
+                        Command="{Binding SalvarCommand}"/>
             </StackLayout>
-            <Label Text="Lista de tarefas" FontAttributes="Bold" FontSize="20" HorizontalOptions="CenterAndExpand" ></Label>
-            <ListView x:Name="listViewTarefa" ItemsSource="{Binding Tarefas}">
+            <Label Text="Lista de tarefas" 
+                   FontAttributes="Bold" 
+                   FontSize="20" 
+                   HorizontalOptions="CenterAndExpand" />
+            <ListView x:Name="listViewTarefa" 
+                      ItemsSource="{Binding Tarefas}"
+                      HasUnevenRows="True">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
                             <ViewCell.ContextActions>
-                                <MenuItem x:Name="menuItem" Text="Excluir" CommandParameter="{Binding .}" Clicked="MenuItem_Excluir"></MenuItem>
+                                <MenuItem x:Name="menuItem" 
+                                          Text="Excluir" 
+                                          CommandParameter="{Binding .}" 
+                                          Command="{Binding Source= {x:Reference TarefaPage}, Path=BindingContext.ExcluirCommand}"/>
+                                <MenuItem Text="Editar" 
+                                          CommandParameter="{Binding .}" 
+                                          Command="{Binding Source= {x:Reference TarefaPage}, Path=BindingContext.EditarCommand}"/>
                             </ViewCell.ContextActions>
-                            <StackLayout>
-                                <Label Text="{Binding Nome}"></Label>
-                                <Label Text="{Binding Finalizada}"></Label>
+                            <StackLayout Orientation="Horizontal"
+                                         Padding="10,5,10,5">
+                                <Label Text="{Binding Nome}" 
+                                       HorizontalOptions="StartAndExpand" 
+                                       VerticalOptions="Center"/>
+                                <Button x:Name="BtnFinalizar" 
+                                        Image="{Binding Finalizada, Converter={StaticResource cvtFinalizado}}" 
+                                        CommandParameter="{Binding .}" 
+                                        Command="{Binding Source= {x:Reference TarefaPage}, Path=BindingContext.StatusCommand}" 
+                                        HorizontalOptions="End" 
+                                        BackgroundColor="Transparent"/>
                             </StackLayout>
                         </ViewCell>
                     </DataTemplate>

@@ -5,6 +5,22 @@
 	<Application.Resources>
 
 		<!-- Application resource dictionary -->
+        <ResourceDictionary>
+            <Color x:Key="CorButton">Green</Color>
+            <Color x:Key="CorLabel">Blue</Color>
+            <Font x:Key="Fonte">Large</Font>
+            <Font x:Key="FonteM">Small</Font>
 
-	</Application.Resources>
+            <Style x:Key="danger" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="Red"/>
+                <Setter Property="Font" Value="{StaticResource Fonte}"/>
+            </Style>
+            <Style x:Key="infor" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="Blue"/>
+                <Setter Property="Font" Value="{StaticResource FonteM}"/>
+            </Style>
+
+        </ResourceDictionary>
+
+    </Application.Resources>
 </Application>

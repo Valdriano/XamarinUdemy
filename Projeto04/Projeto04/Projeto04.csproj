@@ -38,6 +38,9 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Commands\TarefaCommand.cs" />
+    <Compile Include="Commands\TypeCommand.cs" />
+    <Compile Include="Converter\BoolConvert.cs" />
     <Compile Include="DataAccess\AbstractDataAccess.cs" />
     <Compile Include="DataAccess\TarefaDataAccess.cs" />
     <Compile Include="IDataAccess.cs" />

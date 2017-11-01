@@ -15,6 +15,7 @@ namespace Projeto04.Views
     [XamlCompilation( XamlCompilationOptions.Compile )]
     public partial class TarefaPage : ContentPage
     {
+        protected Tarefa tarefa;
         TarefaDataAccess dataAccess = new TarefaDataAccess();
         public TarefaPage()
         {
@@ -22,32 +23,67 @@ namespace Projeto04.Views
 
             BindingContext = new TarefaPageViewModel();
 
-            this.btnAdd.Clicked += BtnAdd_Clicked;
+            //this.btnSalvar.Clicked += BtnSalvar_Clicked;
         }
 
-        private void BtnAdd_Clicked( object sender , EventArgs e )
-        {
-            Tarefa tarefa = new Tarefa();
+        //private void BtnSalvar_Clicked( object sender , EventArgs e )
+        //{
+        //    if( this.tarefa == null )
+        //    {
+        //        Tarefa tarefa = new Tarefa();
+        //        tarefa.Nome = this.txbNome.Text;
+        //        tarefa.Finalizada = false;
 
-            tarefa.Nome = this.txbNome.Text;
-            tarefa.Finalizada = false;
+        //        dataAccess.Insert( tarefa );
+        //    }
+        //    else
+        //    {
+        //        this.tarefa.Nome = this.txbNome.Text;
 
-            dataAccess.Insert( tarefa );
+        //        dataAccess.Update( this.tarefa );
+        //    }
 
-            this.txbNome.Text = string.Empty;
+        //    this.txbNome.Text = string.Empty;
+        //    this.tarefa = null;
 
-            this.listViewTarefa.ItemsSource = null;
+        //    this.listViewTarefa.ItemsSource = null;
+        //    this.listViewTarefa.ItemsSource = dataAccess.GetList();
+        //}
 
-            this.listViewTarefa.ItemsSource = dataAccess.GetList();
-        }
+        //private void MenuItem_Excluir( object sender , EventArgs e )
+        //{
+        //    Tarefa tarefa = ( ( MenuItem ) sender ).CommandParameter as Tarefa;
 
-        private void MenuItem_Excluir( object sender , EventArgs e )
-        {
-            Tarefa tarefa = ( ( MenuItem ) sender ).CommandParameter as Tarefa;
+        //    dataAccess.Delete( tarefa );
 
-            dataAccess.Delete( tarefa );
+        //    BindingContext = new TarefaPageViewModel();
+        //}
 
-            BindingContext = new TarefaPageViewModel();
-        }
+        //private void MenuItem_Editar( object sender , EventArgs e )
+        //{
+        //    Tarefa tarefa = ( ( MenuItem ) sender ).CommandParameter as Tarefa;
+
+        //    this.tarefa = tarefa;
+
+        //    this.txbNome.Text = this.tarefa.Nome;
+        //}
+
+        //private void BtnFinalizar_Status( object sender , EventArgs e )
+        //{
+        //    Tarefa tarefa = ( ( Button ) sender ).CommandParameter as Tarefa;
+
+        //    if( tarefa.Finalizada )
+        //    {
+        //        tarefa.Finalizada = false;
+        //    }
+        //    else
+        //    {
+        //        tarefa.Finalizada = true;
+        //    }
+
+        //    dataAccess.Update( tarefa );
+
+        //    this.BindingContext = new TarefaPageViewModel();
+        //}
     }
 }
