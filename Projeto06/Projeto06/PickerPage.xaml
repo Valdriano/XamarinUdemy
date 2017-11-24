@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Projeto06.PickerPage"
+             Title="Picker">
+    <ContentPage.Content>
+        <StackLayout>
+            <Picker>
+                <Picker.Items>
+                    <x:String>Microsoft</x:String>
+                    <x:String>Google</x:String>
+                    <x:String>Apple</x:String>
+                    <x:String>Oracle</x:String>
+                    <x:String>Java</x:String>
+                    <x:String>CSharp</x:String>
+                    <x:String>C++</x:String>
+                    <x:String>Pyton</x:String>
+                    <x:String>Ruby</x:String>
+                    <x:String>PHP</x:String>
+                </Picker.Items>
+            </Picker>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

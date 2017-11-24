@@ -1,18 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Sinteg.Mobile.Views.LoginPage">
+             x:Class="Sinteg.Mobile.Views.LoginPage"
+             Title="Sinteg Mobile">
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout VerticalOptions="Center"
+                     BackgroundColor="SpringGreen">
             <Label Text="Sinteg Mobile" HorizontalOptions="CenterAndExpand" FontSize="25" FontAttributes="Bold" />
-            <Entry Placeholder="Login" Text="{Binding Login}"></Entry>
-            <Entry Placeholder="Senha" Text="{Binding Senha}" IsPassword="True"></Entry>
+            <Entry Placeholder="Login" Text="{Binding Login}"/>
+            <Entry Placeholder="Senha" Text="{Binding Senha}" IsPassword="True"/>
             <StackLayout Orientation="Vertical">
-                <Button Text="Logar" Command="{Binding LoginCommand}"></Button>
-                <Button Text="Sair" Command="{Binding SairCommand}"></Button>
+                <Button Text="Logar" Command="{Binding LoginCommand}"/>
+                <Button Text="Sair" Command="{Binding SairCommand}"/>
             </StackLayout>
             <ActivityIndicator IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}"></ActivityIndicator>
-            <Label IsVisible="{Binding IsBusy}" Text="Logando no servidor do sinteg, por favor aguarde!" HorizontalOptions="CenterAndExpand"></Label>
+            <Label IsVisible="{Binding IsBusy}" Text="Logando no servidor do sinteg, por favor aguarde!" HorizontalOptions="CenterAndExpand"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

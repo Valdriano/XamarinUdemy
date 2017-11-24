@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Projeto05"
+             Title="Layout"
+             x:Class="Projeto05.MainPage">
+    <ContentPage.Content>
+        <StackLayout Padding="10">
+            <Label Text="Tipos de Layout"
+                   HorizontalOptions="CenterAndExpand" 
+                   FontSize="20"
+                   FontAttributes="Bold"/>
+            <StackLayout Orientation="Horizontal"
+                         Padding="10">
+                <Button x:Name="btnStackLayout"
+                        Clicked="btnStackLayout_Clicked"
+                        Text="StackLayout" 
+                        HorizontalOptions="FillAndExpand"/>
+                <Button x:Name="btnAbsoluteLayout"
+                        Clicked="btnAbsoluteLayout_Clicked"
+                        Text="AbsoluteLayout" 
+                        HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
+            <StackLayout Padding="10"
+                         Orientation="Horizontal">
+                <Button x:Name="btnGridLayout"
+                        Text="GridLayout"
+                        HorizontalOptions="FillAndExpand"
+                        Clicked="btnGridLayout_Clicked"/>
+                <Button x:Name="btnRelativeLayout"
+                        Text="RelativeLayout"
+                        HorizontalOptions="FillAndExpand"
+                        Clicked="btnRelativeLayout_Clicked"/>
+            </StackLayout>
+            <StackLayout Padding="10"
+                         Orientation="Horizontal">
+                <Button x:Name="btnScrollView"
+                        Text="ScrollViewLayout"
+                        HorizontalOptions="Center"
+                        Clicked="btnScrollView_Clicked"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

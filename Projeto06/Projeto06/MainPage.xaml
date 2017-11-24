@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Projeto06"
+             x:Class="Projeto06.MainPage"
+             Title="Controles">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="20">
+                <Label Text="Controles Xamarin"
+                HorizontalOptions="CenterAndExpand" />
+                <BoxView Color="Black"
+                         HorizontalOptions="FillAndExpand"
+                         WidthRequest="5"
+                         HeightRequest="5"/>
+                <StackLayout Padding="5"
+                             Orientation="Horizontal">
+                    <Button x:Name="btnLabel"
+                            Text="Label"
+                            HorizontalOptions="FillAndExpand"
+                            Clicked="btnLabel_Clicked"/>
+                    <Button x:Name="btnEntry"
+                            Text="Entry"
+                            HorizontalOptions="FillAndExpand"
+                            Clicked="btnEntry_Clicked"/>
+                </StackLayout>
+                <BoxView Color="Black"
+                         HorizontalOptions="FillAndExpand"
+                         WidthRequest="5"
+                         HeightRequest="5"/>
+                <StackLayout Padding="5"
+                             Orientation="Horizontal">
+                    <Button x:Name="btnButton"
+                            Text="Button"
+                            HorizontalOptions="FillAndExpand"
+                            Clicked="btnButton_Clicked"/>
+                    <Button x:Name="btnBoxView"
+                            Text="BoxView"
+                            HorizontalOptions="FillAndExpand"
+                            Clicked="btnBoxView_Clicked"/>
+                </StackLayout>
+                <BoxView Color="Black"
+                         HorizontalOptions="FillAndExpand"
+                         WidthRequest="5"
+                         HeightRequest="5"/>
+                <StackLayout Padding="5"
+                             Orientation="Horizontal">
+                    <Button x:Name="btnListView"
+                            Text="ListView"
+                            HorizontalOptions="FillAndExpand"
+                            Clicked="btnListView_Clicked"/>
+                    <Button x:Name="btnActivityIndicator"
+                            Text="ActivityIndicator"
+                            HorizontalOptions="FillAndExpand"
+                            Clicked="btnActivityIndicator_Clicked"/>
+                </StackLayout>
+                <BoxView Color="Black"
+                         HorizontalOptions="FillAndExpand"
+                         WidthRequest="5"
+                         HeightRequest="5"/>
+                <StackLayout Padding="5"
+                             Orientation="Horizontal">
+                    <Button x:Name="btnDateTimePicker"
+                            Text="DateTimePicker"
+                            HorizontalOptions="FillAndExpand"
+                            Clicked="btnDateTimePicker_Clicked"/>
+                    <Button x:Name="btnEditor"
+                            Text="Editor"
+                            HorizontalOptions="FillAndExpand"
+                            Clicked="btnEditor_Clicked"/>
+                </StackLayout>
+                <BoxView Color="Black"
+                         HorizontalOptions="FillAndExpand"
+                         WidthRequest="5"
+                         HeightRequest="5"/>
+                <StackLayout Padding="5"
+                             Orientation="Horizontal">
+                    <Button x:Name="btnPicker"
+                            Text="Picker"
+                            HorizontalOptions="FillAndExpand"
+                            Clicked="btnPicker_Clicked"/>
+                    <Button x:Name="btnProgressBar"
+                            Text="ProgressBar"
+                            HorizontalOptions="FillAndExpand"
+                            Clicked="btnProgressBar_Clicked"/>
+                </StackLayout>
+                <BoxView Color="Black"
+                         HorizontalOptions="FillAndExpand"
+                         WidthRequest="5"
+                         HeightRequest="5"/>
+                <StackLayout Padding="5"
+                             Orientation="Horizontal">
+                    <Button x:Name="btnSlider"
+                            Text="Slider"
+                            HorizontalOptions="FillAndExpand"
+                            Clicked="btnSlider_Clicked"/>
+                    <Button x:Name="btnStepper"
+                            Text="Stepper"
+                            HorizontalOptions="FillAndExpand"
+                            Clicked="btnStepper_Clicked"/>
+                </StackLayout>
+                <BoxView Color="Black"
+                         HorizontalOptions="FillAndExpand"
+                         WidthRequest="5"
+                         HeightRequest="5"/>
+            </StackLayout>
+            
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

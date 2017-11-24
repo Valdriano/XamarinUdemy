@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Projeto06.ListViewPage"
+             Title="ListView">
+    <ContentPage.Content>
+        <!--<StackLayout Padding="10,30,10,30">
+            <ListView ItemsSource="Pessoas">
+                <ListView.Header>
+                    <Label Text="EntryCell"/>
+                </ListView.Header>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <EntryCell Text="{Binding Pessoas.Nome}"/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>-->
+        <StackLayout Padding="10,30,10,30">
+            <ListView ItemsSource="{Binding Pessoas}">
+                <ListView.Header>
+                    <Label Text="ImageCell"/>
+                </ListView.Header>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ImageCell Text="{Binding Nome}"
+                                   Detail="{Binding Sobrenome}"/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+                <ListView.Footer>
+                    <Label Text="Fim da lista"/>
+                </ListView.Footer>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

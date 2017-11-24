@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Projeto06.ProgressBarPage"
+             Title="ProgressBar">
+    <ContentPage.Content>
+        <StackLayout>
+            <ProgressBar HorizontalOptions="FillAndExpand"
+                         BackgroundColor="Blue"
+                         Progress="0.1"/>
+            <ProgressBar HorizontalOptions="FillAndExpand"
+                         BackgroundColor="Gray"
+                         Progress="0.2"/>
+            <ProgressBar HorizontalOptions="FillAndExpand"
+                         BackgroundColor="Green"
+                         Progress="0.3"/>
+            <ProgressBar HorizontalOptions="FillAndExpand"
+                         BackgroundColor="Yellow"
+                         Progress="0.4"/>
+            <ProgressBar HorizontalOptions="FillAndExpand"
+                         BackgroundColor="Red"
+                         Progress="0.5"/>
+            <ProgressBar HorizontalOptions="FillAndExpand"
+                         BackgroundColor="Pink"
+                         Progress="0.6"/>
+            <ProgressBar HorizontalOptions="FillAndExpand"
+                         BackgroundColor="Purple"
+                         Progress="0.7"/>
+            <ProgressBar HorizontalOptions="FillAndExpand"
+                         BackgroundColor="Maroon"
+                         Progress="0.8"/>
+            <ProgressBar HorizontalOptions="FillAndExpand"
+                         BackgroundColor="Black"
+                         Progress="0.9"/>
+            <ProgressBar HorizontalOptions="FillAndExpand"
+                         BackgroundColor="Azure"
+                         Progress="1"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

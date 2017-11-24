@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Projeto06.SliderPage"
+             Title="Slider">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label x:Name="Label1"/>
+            <Slider x:Name="Slider1"
+                    Minimum="0"
+                    Maximum="1000"
+                    Value="10"
+                    ValueChanged="Slider1_ValueChanged"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

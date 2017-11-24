@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Projeto06.StepperPage"
+             Title="Stepper">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label x:Name="Label1"/>
+            <Stepper x:Name="Stepper1"
+                     Minimum="0"
+                     Maximum="100"
+                     Increment="2"
+                     ValueChanged="Stepper1_ValueChanged"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Projeto05.AbsoluteLayoutPage">
+    <ContentPage.Content>
+        <AbsoluteLayout>
+            <BoxView Color="Red" AbsoluteLayout.LayoutBounds="100,60,120,150" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"/>
+            <BoxView Color="Green" AbsoluteLayout.LayoutBounds="0.5,0.6,.7,.6" AbsoluteLayout.LayoutFlags="All" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"/>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>
