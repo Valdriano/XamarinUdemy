@@ -73,5 +73,20 @@ namespace Projeto06
         {
             Navigation.PushAsync( new StepperPage() );
         }
+
+        private void btnSwitch_Clicked( object sender , EventArgs e )
+        {
+            Navigation.PushAsync( new SwitchPage() );
+        }
+
+        private void btnImage_Clicked( object sender , EventArgs e )
+        {
+            Navigation.PushAsync( new ImagePage() );
+        }
+
+        private void btnWebView_Clicked( object sender , EventArgs e )
+        {
+            Navigation.PushAsync( new WebViewPage() );
+        }
     }
 }

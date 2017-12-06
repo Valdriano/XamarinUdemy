@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Projeto08"
+             x:Class="Projeto08.MainPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <TableView HasUnevenRows="True">
+                <TableRoot>
+                    <TableSection Title="NavigationPage">
+                        <ViewCell>
+                            <StackLayout>
+                                <Button x:Name="btnNavigationPage"
+                                Text="NavigationPage"
+                                Clicked="btnNavigationPage_Clicked"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </TableSection>
+                    <TableSection Title="TabberPage">
+                        <ViewCell>
+                            <StackLayout>
+                                <Button x:Name="btnTabberPage"
+                                Text="TabberPage"
+                                Clicked="btnTabberPage_Clicked"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </TableSection>
+                    <TableSection Title="CarouselPage">
+                        <ViewCell>
+                            <StackLayout>
+                                <Button x:Name="btnCarouselPage"
+                                Text="CarouselPage"
+                                Clicked="btnCarouselPage_Clicked"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </TableSection>
+                    <TableSection Title="MasterPage">
+                        <ViewCell>
+                            <StackLayout>
+                                <Button x:Name="btnMasterPage"
+                                Text="MasterPage"
+                                Clicked="btnMasterPage_Clicked"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </TableSection>
+                </TableRoot>
+            </TableView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -38,6 +38,10 @@
                         Text="ScrollViewLayout"
                         HorizontalOptions="Center"
                         Clicked="btnScrollView_Clicked"/>
+                <Button x:Name="btnTableView"
+                        Text="TableViewLayout"
+                        HorizontalOptions="Center"
+                        Clicked="btnTableView_Clicked"/>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

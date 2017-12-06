@@ -38,5 +38,10 @@ namespace Projeto05
         {
             Navigation.PushAsync( new ScrollViewPage() );
         }
+
+        private void btnTableView_Clicked( object sender , EventArgs e )
+        {
+            Navigation.PushAsync( new TableViewPage() );
+        }
     }
 }

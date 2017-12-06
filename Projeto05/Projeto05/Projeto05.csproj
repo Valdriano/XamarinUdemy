@@ -57,6 +57,9 @@
     <Compile Include="StackLayoutPage.xaml.cs">
       <DependentUpon>StackLayoutPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="TableViewPage.xaml.cs">
+      <DependentUpon>TableViewPage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="MainPage.xaml">
@@ -108,6 +111,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="ScrollViewPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="TableViewPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

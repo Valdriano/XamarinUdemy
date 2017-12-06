@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Projeto06.SwitchPage"
+             Title="Switch">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Vertical">
+                <Label Text="Offline"
+                       FontSize="22"
+                       FontAttributes="Bold"/>
+                <Switch x:Name="sthConectado"
+                    IsToggled="False"
+                    Toggled="sthConectado_Toggled"/>
+            </StackLayout>
+            <BoxView x:Name="boxViewConectado"
+                     VerticalOptions="Fill"
+                     HorizontalOptions="Fill"
+                     Color="Blue"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

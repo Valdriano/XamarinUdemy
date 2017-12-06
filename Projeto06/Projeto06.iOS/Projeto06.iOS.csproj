@@ -89,6 +89,7 @@
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="BaseUrl_IOS.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
     <None Include="Entitlements.plist" />
@@ -139,6 +140,13 @@
       <Project>{2d77f9e4-d2b8-4987-bf24-a0e1f3851270}</Project>
       <Name>Projeto06</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Visual.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\HTMLPage.html" />
+    <Content Include="Resources\StyleCSS.css" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

@@ -103,6 +103,36 @@
                          HorizontalOptions="FillAndExpand"
                          WidthRequest="5"
                          HeightRequest="5"/>
+                <StackLayout Padding="5"
+                             Orientation="Horizontal">
+                    <Button x:Name="btnSwitch"
+                            Text="Switch"
+                            HorizontalOptions="FillAndExpand"
+                            Clicked="btnSwitch_Clicked"/>
+                    <Button x:Name="btnImage"
+                            Text="Image"
+                            HorizontalOptions="FillAndExpand"
+                            Clicked="btnImage_Clicked"/>
+                </StackLayout>
+                <BoxView Color="Black"
+                         HorizontalOptions="FillAndExpand"
+                         WidthRequest="5"
+                         HeightRequest="5"/>
+                <StackLayout Padding="5"
+                             Orientation="Horizontal">
+                    <Button x:Name="btnWebView"
+                            Text="WebView"
+                            HorizontalOptions="FillAndExpand"
+                            Clicked="btnWebView_Clicked"/>
+                    <!--<Button x:Name="btnImage"
+                            Text="Image"
+                            HorizontalOptions="FillAndExpand"
+                            Clicked="btnImage_Clicked"/>-->
+                </StackLayout>
+                <BoxView Color="Black"
+                         HorizontalOptions="FillAndExpand"
+                         WidthRequest="5"
+                         HeightRequest="5"/>
             </StackLayout>
             
         </ScrollView>

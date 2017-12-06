@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Projeto08.Page1"
+             Title="NavigationPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Welcome to Xamarin.Forms!"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Button x:Name="btnModal"
+                    Text="Modal"
+                    Clicked="btnModal_Clicked"/>
+            <Button x:Name="btnPush"
+                    Text="Push"
+                    Clicked="btnPush_Clicked"/>
+            <Button x:Name="btnFechaModal"
+                    Text="Fechar Modal"
+                    Clicked="btnFechaModal_Clicked"/>
+            <Button x:Name="btnFechaPush"
+                    Text="Fecha Push"
+                    Clicked="btnFechaPush_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
