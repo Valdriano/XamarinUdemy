@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Projeto10"
+             x:Class="Projeto10.MainPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Button x:Name="btnAlertaSimples"
+                    Text="Alerta Simples"
+                    Clicked="btnAlertaSimples_Clicked"/>
+            <Button x:Name="btnAlertaComposto"
+                    Text="Alerta Composto"
+                    Clicked="btnAlertaComposto_Clicked"/>
+            <Button x:Name="btnQuestionar"
+                    Text="Questionar"
+                    Clicked="btnQuestionar_Clicked"/>
+            <Button x:Name="btnAction"
+                    Text="Action"
+                    Clicked="btnAction_Clicked"/>
+            <Label  x:Name="lblResultado"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

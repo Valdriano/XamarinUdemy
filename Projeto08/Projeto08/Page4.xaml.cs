@@ -16,5 +16,11 @@ namespace Projeto08
         {
             InitializeComponent();
         }
+
+        private void btnPagi5_Clicked( object sender , EventArgs e )
+        {
+            Detail = new NavigationPage( new Page5() );
+            IsPresented = false;
+        }
     }
 }

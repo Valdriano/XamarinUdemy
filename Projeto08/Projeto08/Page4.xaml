@@ -2,13 +2,13 @@
 <MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Projeto08.Page4"
-                  xmlns:local="clr-namespace:Projeto08">
+             xmlns:local="clr-namespace:Projeto08;assembly=Projeto08">
     <MasterDetailPage.Master>
         <ContentPage Title="Menu">
             <StackLayout>
                 <TableView HasUnevenRows="True">
                     <TableRoot>
-                        <TableSection>
+                        <TableSection Title="Usuario">
                             <ViewCell>
                                 <StackLayout>
                                     <Image WidthRequest="150"
@@ -18,10 +18,13 @@
                                 </StackLayout>
                             </ViewCell>
                         </TableSection>
-                        <TableSection>
+                        <TableSection Title="Menu">
                             <ViewCell>
-                                <StackLayout>
-                                    <Label Text="menu 1"/>
+                                <StackLayout Padding="10">
+                                    <!--<Label Text="menu 1"/>-->
+                                    <Button x:Name="btnPagi5"
+                                            Text="Pagina 5"
+                                            Clicked="btnPagi5_Clicked"/>
                                 </StackLayout>
                             </ViewCell>
                         </TableSection>
@@ -31,6 +34,10 @@
         </ContentPage>
     </MasterDetailPage.Master>
     <MasterDetailPage.Detail>
-        <local:Page5></local:Page5>
+        <NavigationPage>
+            <x:Arguments>
+                <local:Page5></local:Page5>
+            </x:Arguments>
+        </NavigationPage>
     </MasterDetailPage.Detail>
 </MasterDetailPage>

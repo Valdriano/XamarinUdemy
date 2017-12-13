@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Projeto09"
+             x:Class="Projeto09.MainPage"
+             Title="CEP">
+    <ContentPage.Content>
+        <StackLayout>
+            <TableView HasUnevenRows="True"
+                       Intent="Form">
+                <TableRoot>
+                    <TableSection Title="Consultar CEP">
+                        <EntryCell Label="CEP:"
+                                   x:Name="txtCEP"
+                                   Placeholder="69000000"
+                                   Keyboard="Numeric"/>
+                        <ViewCell>
+                            <StackLayout Padding="10">
+                                <Button Text="Buscar"
+                                        x:Name="btnBuscar"
+                                        Clicked="btnBuscar_Clicked"/>
+                            </StackLayout>     
+                        </ViewCell>
+                    </TableSection>
+                    <TableSection>
+                        <ViewCell>
+                            <StackLayout Padding="10">
+                                <Label x:Name="lblCEP"/>
+                                <Label x:Name="lblRua"/>
+                                <Label x:Name="lblBairro"/>
+                                <Label x:Name="lblComplemento"/>
+                                <Label x:Name="lblCidade"/>
+                                <Label x:Name="lblUF"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </TableSection>
+                </TableRoot>
+            </TableView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

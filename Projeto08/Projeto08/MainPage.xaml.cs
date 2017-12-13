@@ -31,7 +31,7 @@ namespace Projeto08
 
         private void btnMasterPage_Clicked( object sender , EventArgs e )
         {
-            Application.Current.MainPage = new NavigationPage( new Page4() );
+            Application.Current.MainPage = new Page4();
         }
     }
 }
